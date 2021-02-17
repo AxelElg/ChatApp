@@ -1,17 +1,10 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-// import { UserModule } from './modules/user/user.module';
-import { GraphQLModule } from '@nestjs/graphql';
+import { UserModule } from './modules/user/user.module';
 
 @Module({
-  // imports: [UserModule],
-  imports: [
-    GraphQLModule.forRoot({
-      debug: false,
-      playground: true
-    })
-  ],
+  imports: [UserModule],
   controllers: [AppController],
   providers: [AppService],
 })
