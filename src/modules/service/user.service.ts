@@ -44,29 +44,4 @@ export class UserService {
 
     return this.users
   }
-
-  // findAll(): User[] {
-  //   return this.users;
-  // }
-
-  // create(user: User): User {
-  //   this.users.push(user);
-  //   return user;
-  // } 
-
-  // update(updatedUser: User): User {
-  //   this.users.splice(
-  //     this.users.indexOf(
-  //       this.users.find((user: User): Boolean => user.id === updatedUser.id)
-  //     ), 1, updatedUser);
-  //   return updatedUser;
-  // }
-
-  // deleteUser(id: number): User[] {
-  //   this.users.splice(
-  //     this.users.indexOf(
-  //       this.users.find((user: User): Boolean => user.id === id)
-  //     ), 1);
-  //   return this.users;
-  // }
 }
