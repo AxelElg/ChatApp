@@ -2,6 +2,7 @@ import { Injectable } from "@nestjs/common";
 import { v4 } from 'uuid';
 import { CreateChatInput } from '../dto/input/create-chat.input';
 import { Chat } from '../models/chat.model';
+import { Message } from '../models/message.model';
 import { UpdateChatInput } from '../dto/input/update-chat.input';
 import { GetChatArgs } from '../dto/args/get-chat.args';
 import { DeleteChatInput } from '../dto/input/delete-chat.input';
@@ -26,7 +27,13 @@ export class ChatService {
 
   public updateChat(updateChatData: UpdateChatInput): Chat {
     const chat: Chat = this.chats.find(chat => chat.chatId === updateChatData.chatId);
-    chat.messages.push(updateChatData.message);
+
+    const message: Message = {
+        timeStamp: updateChatData.timeStamp,
+        senderId: updateChatData.senderId,
+        message: updateChatData.message
+    }
+    chat.messages.push(message)
 
     return chat;
   }
