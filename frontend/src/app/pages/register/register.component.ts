@@ -11,18 +11,18 @@ export class RegisterComponent {
 
   constructor(private apollo: Apollo) {}
 
-  onSubmit(): void {
+  onSubmit() {
     console.log(this);
     
-    // this.apollo.watchQuery({
-    //   mutation: gql`
-    //     {
-    //       createUser(createUserDate: {userName: ${this}}) {
-    //       userId
-    //       userName
-    //       }
-    //     }
-    //   `,
-    // })
+    this.apollo.mutate({
+      mutation: gql`
+        {
+          mutation createUser(createUserDate: {userName: ${this}}) {
+          userId
+          userName
+          }
+        }
+      `,
+    })
   }
 }
