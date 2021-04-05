@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { appRoutingModule } from './app.routing';
 import { navbarComponent } from './components/navbar/navbar.component';
@@ -10,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   imports: [
     BrowserModule,
+    CommonModule,
     appRoutingModule,
     GraphQLModule,
     HttpClientModule,
