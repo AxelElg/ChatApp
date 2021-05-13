@@ -1,10 +1,16 @@
-import TopBar from './LayoutsPublic/TopBar';
+import TopBar from './PublicLayout/TopBar';
+import PageFoot from './PublicLayout/PageFoot';
 
 export default function PublicLayout({children}) {
   return (
-    <div>
-      <h1>hello</h1>
-      {children}
-    </div>
+    <>
+      <TopBar />
+        <main>
+          <div className="container">
+            {children}
+          </div>
+        </main>
+      <PageFoot />
+    </>
   )
 }
