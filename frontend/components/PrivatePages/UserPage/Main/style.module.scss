@@ -1,0 +1,10 @@
+@import "variables";
+
+.main {
+  box-sizing: border-box;
+  height: calc(100vh - 20px);
+  width: 100%;
+  padding-top: 54px;
+  display: grid;
+  grid-template: 100% / 60px auto;
+}

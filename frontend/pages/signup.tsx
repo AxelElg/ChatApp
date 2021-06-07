@@ -1,11 +1,8 @@
 import React from 'react';
-import PublicLayout from '../components/PublicLayout';
-import SignupForm from "../components/forms/SignupForm";
+import SignUp from "../components/PuplicPages/SignUp";
 
 export default function signup() {
   return (
-    <PublicLayout>
-      <SignupForm />
-    </PublicLayout>
+    <SignUp/>
   )
 }

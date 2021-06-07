@@ -1,5 +1,5 @@
-import TopBar from './PublicLayout/TopBar';
-import PageFoot from './PublicLayout/PageFoot';
+import TopBar from './TopBar';
+import PageFoot from './PageFoot';
 
 export default function PublicLayout({children}) {
   return (

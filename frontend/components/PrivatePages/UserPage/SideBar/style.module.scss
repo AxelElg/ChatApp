@@ -1,0 +1,8 @@
+@import "variables";
+
+.sideBar {
+  box-sizing: border-box;
+  width: 100%;
+  padding: $gutter;
+  border-right: $border;
+}

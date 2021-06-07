@@ -1,11 +1,9 @@
 import React from 'react'
-import PublicLayout from '../components/PublicLayout'
-import LoginForm from '../components/forms/LoginForm';
+
+import Login from '../components/PuplicPages/Login' 
 
 export default function login() {
   return (
-    <PublicLayout>
-      <LoginForm />
-    </PublicLayout>
+    <Login />
   )
 }

@@ -4,7 +4,7 @@ export default function TopBar() {
   const router = useRouter();
 
   return (
-    <div className="top-bar">
+    <div className="top-bar public">
       <div className="container">
           <img src="" alt="error" />
           <div className="menu">

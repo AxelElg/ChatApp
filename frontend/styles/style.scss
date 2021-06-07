@@ -1,25 +1,8 @@
-$text: 1rem;
-$text-smaller: 0.75rem;
-$text-small: 0.625rem;
-$header: 2.5rem;
-$header-smaller: 1.8rem;
-$header-small: 1rem;
-$max-width: 1080px;
+@import "variables";
 
-$gutter-small: 4px;
-$gutter-smaller: 8px;
-$gutter: 16px;
-$gutter2x: 32px;
-$gutter3x: 48px;
-$gutter4x: 64px;
-
-$prime-color: #ff7f50;
-$dark-color: #272727;
-$light-color: #fff;
-
-$btn-color: #ff7f50;
-$disabled-btn-color: #808080;
-$sub-container: rgba(149, 192, 216, 0.1);
+* {
+  box-sizing: border-box;
+}
 
 body {
   padding: 0;
@@ -57,14 +40,6 @@ main {
   align-items: center;
 }
 
-footer {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  font-family: sans-serif;
-  font-size: $text-small;
-}
-
 
 form {
   width: 100%;
@@ -78,7 +53,6 @@ form {
   } 
   
   input {
-    // display: block;
     width: 100%;
     margin-bottom: $gutter;
 
@@ -125,7 +99,7 @@ form {
   padding: $gutter-smaller $gutter;
   font-size: $text;
   background-color: $prime-color;
-  color: white;
+  color: #fff;
   border: none;
   font-weight: bold;
   border-radius: $gutter2x;
@@ -145,9 +119,16 @@ form {
   width: 100%;
   height: 54px;
   background-color: $light-color;
-  box-shadow: 0px 0px  15px 5px rgba(0, 0, 0, 0.1);
+  
+  &.public{
+     box-shadow: 0px 0px  15px 5px rgba(0, 0, 0, 0.1);
+  }
 
-  .container {
+  &.private {
+    border-bottom: 1px solid gray;
+  }
+
+  & > .container {
     display: flex;
     align-items: center;
     justify-content: space-between;

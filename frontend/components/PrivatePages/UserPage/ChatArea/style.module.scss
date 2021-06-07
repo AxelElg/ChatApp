@@ -1,0 +1,19 @@
+@import "variables";
+
+.chatArea {
+  height: 100%;
+  width: 100%;
+  display: grid;
+
+  &.col1 {
+    grid-template-columns: 1fr;
+  }
+  
+  &.col2 {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  &.col3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
